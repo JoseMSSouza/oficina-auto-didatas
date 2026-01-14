@@ -1,4 +1,3 @@
-cat <<EOF > hugo.toml
 # --- 1. IDENTIDADE DO SITE ---
 baseURL = "https://autodidatas.com.br/" 
 languageCode = "pt-br"
@@ -25,7 +24,6 @@ theme = "lotusdocs"
     target = "assets"
     
   # --- 2. CORREÇÃO DO MENU HAMBÚRGUER (JS) ---
-  # Adicionamos esta montagem que faltava para o Javascript do Bootstrap
   [[module.mounts]]
     source = "themes/github.com/twbs/bootstrap"
     target = "assets/js/node_modules/bootstrap"
@@ -40,7 +38,6 @@ theme = "lotusdocs"
   secondary = "indigo"
   
   # --- 3. CORREÇÃO DA LOGO (LAYOUT MOBILE) ---
-  # Aponta para o arquivo físico que movemos para 'static/images/logos/logo.svg'
   [params.logo]
     src = "images/logos/logo.svg"
     url = "/"
@@ -65,4 +62,3 @@ theme = "lotusdocs"
     url = "/docs/"
     identifier = "docs"
     weight = 10
-EOF
