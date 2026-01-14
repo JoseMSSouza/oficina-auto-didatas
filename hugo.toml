@@ -1,4 +1,6 @@
-baseURL = "https://oficina-auto-didatas.pages.dev/"
+# --- 1. CORREÇÃO DE DOMÍNIO ---
+# O endereço deve ser EXATAMENTE o que aparece no navegador
+baseURL = "https://autodidatas.com.br/" 
 languageCode = "pt-br"
 title = "Oficina Autodidata"
 theme = "lotusdocs"
@@ -8,7 +10,7 @@ theme = "lotusdocs"
     extended = true
     min = "0.120.0"
 
-  # --- MAPA DE MONTAGEM (SOBERANIA LOCAL) ---
+  # --- MAPA DE MONTAGEM (SOLUÇÃO DE DEPENDÊNCIAS LOCAIS) ---
   [[module.mounts]]
     source = "content"
     target = "content"
@@ -22,6 +24,12 @@ theme = "lotusdocs"
     source = "assets"
     target = "assets"
     
+  # --- 2. CORREÇÃO DO MENU HAMBÚRGUER (JS) ---
+  # Adicionamos esta montagem que faltava para o Javascript do Bootstrap
+  [[module.mounts]]
+    source = "themes/github.com/twbs/bootstrap"
+    target = "assets/js/node_modules/bootstrap"
+
   # Monta o Popper.js onde o Bootstrap consegue enxergar
   [[module.mounts]]
     source = "themes/github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2"
@@ -32,8 +40,8 @@ theme = "lotusdocs"
   secondary = "indigo"
   
   # --- TRAVAS DE PRIVACIDADE ---
-  google_fonts = []        # Bloqueia fontes externas
-  google_analytics = false # Bloqueia rastreamento
+  google_fonts = []        
+  google_analytics = false 
   
   [params.feedback]
     enabled = false
