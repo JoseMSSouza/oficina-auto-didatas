@@ -1,4 +1,3 @@
-# --- 1. IDENTIDADE DO SITE ---
 baseURL = "https://autodidatas.com.br/" 
 languageCode = "pt-br"
 title = "Oficina Autodidata"
@@ -9,7 +8,6 @@ theme = "lotusdocs"
     extended = true
     min = "0.120.0"
 
-  # --- MAPA DE MONTAGEM (SOLUÇÃO DE DEPENDÊNCIAS LOCAIS) ---
   [[module.mounts]]
     source = "content"
     target = "content"
@@ -22,13 +20,9 @@ theme = "lotusdocs"
   [[module.mounts]]
     source = "assets"
     target = "assets"
-    
-  # --- 2. CORREÇÃO DO MENU HAMBÚRGUER (JS) ---
   [[module.mounts]]
     source = "themes/github.com/twbs/bootstrap"
     target = "assets/js/node_modules/bootstrap"
-
-  # Monta o Popper.js onde o Bootstrap consegue enxergar
   [[module.mounts]]
     source = "themes/github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2"
     target = "assets/js/node_modules/@popperjs/core"
@@ -37,13 +31,12 @@ theme = "lotusdocs"
   primary = "blue"
   secondary = "indigo"
   
-  # --- 3. CORREÇÃO DA LOGO (LAYOUT MOBILE) ---
+  # --- CORREÇÃO DEFINITIVA ---
   [params.logo]
-    src = "images/logos/logo.svg"
+    src = "/images/logos/logo.svg"  # <--- A BARRA '/' MÁGICA AQUI
     url = "/"
     alt = "Oficina Autodidata"
   
-  # --- TRAVAS DE PRIVACIDADE ---
   google_fonts = []        
   google_analytics = false 
   
