@@ -1,5 +1,5 @@
-# --- 1. CORREÇÃO DE DOMÍNIO ---
-# O endereço deve ser EXATAMENTE o que aparece no navegador
+cat <<EOF > hugo.toml
+# --- 1. IDENTIDADE DO SITE ---
 baseURL = "https://autodidatas.com.br/" 
 languageCode = "pt-br"
 title = "Oficina Autodidata"
@@ -39,6 +39,13 @@ theme = "lotusdocs"
   primary = "blue"
   secondary = "indigo"
   
+  # --- 3. CORREÇÃO DA LOGO (LAYOUT MOBILE) ---
+  # Aponta para o arquivo físico que movemos para 'static/images/logos/logo.svg'
+  [params.logo]
+    src = "images/logos/logo.svg"
+    url = "/"
+    alt = "Oficina Autodidata"
+  
   # --- TRAVAS DE PRIVACIDADE ---
   google_fonts = []        
   google_analytics = false 
@@ -58,3 +65,4 @@ theme = "lotusdocs"
     url = "/docs/"
     identifier = "docs"
     weight = 10
+EOF
