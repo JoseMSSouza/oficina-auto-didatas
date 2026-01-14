@@ -30,19 +30,19 @@ theme = "lotusdocs"
 [params]
   primary = "blue"
   secondary = "indigo"
-  
-  # --- CORREÇÃO DEFINITIVA ---
+
+  # --- LOGO NOVO ---
   [params.logo]
-    src = "/images/logos/logo.svg"  # <--- A BARRA '/' MÁGICA AQUI
+    src = "/brand/logo.svg"   
     url = "/"
     alt = "Oficina Autodidata"
-  
+
   google_fonts = []        
   google_analytics = false 
-  
+
   [params.feedback]
     enabled = false
-  
+
   [params.homepage]
     show_button = true
     button_text = "Entrar na Oficina"
