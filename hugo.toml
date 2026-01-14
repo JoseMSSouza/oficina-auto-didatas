@@ -1,0 +1,52 @@
+baseURL = "https://oficina-auto-didatas.pages.dev/"
+languageCode = "pt-br"
+title = "Oficina Autodidata"
+theme = "lotusdocs"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.120.0"
+
+  # --- MAPA DE MONTAGEM (SOBERANIA LOCAL) ---
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+    
+  # Monta o Popper.js onde o Bootstrap consegue enxergar
+  [[module.mounts]]
+    source = "themes/github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2"
+    target = "assets/js/node_modules/@popperjs/core"
+
+[params]
+  primary = "blue"
+  secondary = "indigo"
+  
+  # --- TRAVAS DE PRIVACIDADE ---
+  google_fonts = []        # Bloqueia fontes externas
+  google_analytics = false # Bloqueia rastreamento
+  
+  [params.feedback]
+    enabled = false
+  
+  [params.homepage]
+    show_button = true
+    button_text = "Entrar na Oficina"
+    button_link = "/docs/"
+    tagline = "Infraestrutura Local & Soberania Digital"
+
+[menu]
+  [[menu.primary]]
+    name = "Docs"
+    url = "/docs/"
+    identifier = "docs"
+    weight = 10

@@ -1,0 +1,8 @@
+# Ignoramos lixo de sistema e cache
+resources
+.hugo_build.lock
+.DS_Store
+
+# --- A REGRA DE OURO ---
+# Não ignoramos a pasta public, pois ela é nosso Deploy.
+!public/
